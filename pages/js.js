@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Link from 'next/link'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import styles from '../styles/mod.user.css'
 const Home = () => {
   const [users, setUsers] = useState([]);
   const apiEndPoint = "https://jsonplaceholder.typicode.com/users";
@@ -39,7 +38,7 @@ const Home = () => {
                 <td  > {post.name} </td>
                 <td  > {post.email} </td>
                 <td>
-                <Link href={'/hey/' + post.id} key={post.id}> <button
+                <Link href={'/' + post.id} key={post.id}> <button
                      
                     className="btn btn-primary btn-sm"
                   >
